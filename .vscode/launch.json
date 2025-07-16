@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch React App (Vite)",
+      "cwd": "${workspaceFolder}/src/react-app",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen"
+    },
+    {
+      "type": "firefox",
+      "request": "launch",
+      "name": "Debug React App (Firefox)",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/src/react-app",
+      "reAttach": true
+    }
+  ]
+}

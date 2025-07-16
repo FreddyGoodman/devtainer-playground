@@ -1,0 +1,29 @@
+{
+    "name": "React Web App",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode",
+                "ms-vscode.vscode-typescript-next",
+                "dsznajder.es7-react-js-snippets",
+                "firefox-devtools.vscode-firefox-debug"
+            ]
+        }
+    },
+    "forwardPorts": [5173],
+    "postCreateCommand": "cd ./src/react-app && npm install",
+    "portsAttributes": {
+        "5173": {
+            "label": "app"
+        }
+    }
+}
